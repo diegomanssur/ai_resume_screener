@@ -1,28 +1,12 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# 
-
 # # Build an AI Resume Screener with Python & Llama 3
 
 # ### Installing Ollama and connecting it with Python. Opening in terminal
 
-# In[1]:
-
-
 get_ipython().system('ollama pull llama3')
-
-
-# In[2]:
-
-
 get_ipython().system('pip install ollama pymupdf')
 
 
 # ### Step 1: The Reader
-
-# In[3]:
-
 
 import fitz
 
@@ -35,9 +19,6 @@ def extract_text_from_pdf(pdf_path):
 
 
 # ### Step 2: The Brain
-
-# In[4]:
-
 
 import ollama
 
@@ -77,9 +58,6 @@ def screen_resume (resume_text, job_description):
 
 
 # ### Step 3: The Execution
-
-# In[6]:
-
 
 import json
 
@@ -137,11 +115,7 @@ try:
 except json.JSONDecodeError:
     print("Failed to pase JSON. Raw output:")
     print(result_json_string)
-
-
-# In[ ]:
-
-
+    
 
 
 
